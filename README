@@ -1,0 +1,10 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3513
+
+Syntax hightlighting for Stylus
+  - http://learnboost.github.com/stylus/
+
+CSS3/HTML5 bundled in and adapted from css3.vim by Hsiaoming Young
+  - http://www.vim.org/scripts/script.php?script_id=3042
+
+Report issues and follow updates at:
+  - https://github.com/wavded/vim-stylus
