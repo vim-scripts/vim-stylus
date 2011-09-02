@@ -50,7 +50,7 @@ syn case ignore
 syn region cssInclude start="@import" end="\n" contains=cssComment,cssURL,cssUnicodeEscape,cssMediaType
 
 syn cluster stylusCssSelectors contains=cssTagName,cssSelector.*,cssIdentifier,cssAttributeSelector,cssPseudo.*,cssClassName
-syn cluster stylusCssAttributes contains=css.*Attr,stylusComment,cssValue.*,cssColor,cssURL,cssImportant,cssError,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssRenderProp
+syn cluster stylusCssAttributes contains=css.*Attr,cssValue.*,cssColor,cssURL,cssImportant,cssError,cssStringQ,cssStringQQ,cssFunction,cssUnicodeEscape,cssRenderProp
 
 syn region stylusDefinition matchgroup=cssBraces start="{" end="}" contains=TOP
 " syn match stylusProperty "\%([{};]\s*\|^\)\@<=\%([[:alnum:]-]\|#{[^{}]*}\)\+:" contains=css.*Prop skipwhite nextgroup=stylusCssAttribute contained containedin=stylusDefinition
@@ -63,12 +63,12 @@ syn match stylusUserFunction "^\s*\%([[:alnum:]_-]\+\)(\@="
 syn match stylusUserFunction "\<\%([^)]*\)\>(\@=" contained
 
 syn match stylusFunction "\<\%(red\|green\|blue\|alpha\|dark\|light\)\>(\@=" contained
-syn match stylusFunction "\<\%(hue\|saturation\|lightness\|typeof\|unit\|match\)\>(\@=" contained
-syn match stylusFunction "\<\%(hsla\|hsl\|rgba\|rgb\|lighten\|darken\|lighten-by\|darken-by\)\>(\@=" contained
-syn match stylusFunction "\<\%(abs\|ceil\|floor\|round\|min\|max\|even\|odd\|sum\|avg\|join\)\>(\@=" contained
-syn match stylusFunction "\<\%(desaturate\|saturate\|unquote\|quote\)\>(\@=" contained
+syn match stylusFunction "\<\%(hue\|saturation\|lightness\|push\|unshift\|typeof\|unit\|match\)\>(\@=" contained
+syn match stylusFunction "\<\%(hsla\|hsl\|rgba\|rgb\|lighten\|darken\)\>(\@=" contained
+syn match stylusFunction "\<\%(abs\|ceil\|floor\|round\|min\|max\|even\|odd\|sum\|avg\|sin\|cos\|join\)\>(\@=" contained
+syn match stylusFunction "\<\%(desaturate\|saturate\|unquote\|quote\|s\)\>(\@=" contained
 syn match stylusFunction "\<\%(operate\|length\|warn\|error\|last\|p\|\)\>(\@=" contained
-syn match stylusFunction "\<\%(opposite-position\|image-size\)\>(\@=" contained
+syn match stylusFunction "\<\%(opposite-position\|image-size\|add-property\)\>(\@=" contained
 
 syn keyword stylusVariable null true false arguments
 syn keyword stylusControl  if else unless for in return
