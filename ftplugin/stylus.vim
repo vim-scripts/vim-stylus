@@ -45,9 +45,19 @@ endif
 
 setlocal comments= commentstring=//\ %s
 
+setlocal suffixesadd=.styl
+
+" Add '-' and '#' to the what makes up a keyword.
+" This means that 'e' and 'w' work properly now, for properties
+" and valid variable names.
+setl iskeyword+=#,-
+
 let b:undo_ftplugin = "setl cms< com< "
       \ " | unlet! b:browsefilter b:match_words | " . s:undo_ftplugin
 
 let &cpo = s:save_cpo
+
+" Add a Stylus command (to see if it's valid)
+command! Stylus !clear; cat % | stylus
 
 " vim:set sw=2:
